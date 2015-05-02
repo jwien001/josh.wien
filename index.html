@@ -1,6 +1,8 @@
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="css/skeleton.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -9,12 +11,46 @@
             
             ga('create', 'UA-62307604-1', 'auto');
             ga('send', 'pageview');
-        
         </script>
     </head>
     <body>
-        <p>Welcome to josh.wien!</p>
-        <p>Full site coming...</p>
-        <img id="soon" src="soon.png" />
+        <div class="container">
+
+            <div class="row">
+                <div class="circular"></div>
+                <h2>Josh Wien</h2>
+                <p id="blurb">
+                    ...is a Computer Science graduate from the Georgia Institute of Technology and currently works as a Software Engineer in San Francisco, CA.
+                </p>
+            </div>
+
+            <div class="row">
+                <div class="one-half column left">
+                    <a id="blog-button" class="button" href="https://josh.wien/blog">Blog</a>
+                </div>
+                <div class="one-half column right">
+                    <a id="github-button" class="button" href="https://github.com/jwien001">GitHub</a>
+                </div>
+            </div>
+            
+            <div class="last-button row">
+                <div class="one-half column left">
+                    <a id="email-button" class="button" href="mailto:jwien001+website@gmail.com">Email</a>
+                </div>
+                <div class="one-half column right">
+                    <a id="resume-button" class="button" disabled="disabled">
+                        <span>Resume</span>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- <div id="button-text" class="row">
+                <p id="blog-text">My blog is where you will find mostly miscellaneous musings about whatever strikes my fancy.</p>
+                <p id="github-text">A collection of my various side projects from over the years.</p>
+                <p id="email-text">Want to get in touch? Email is still the best way.</p>
+                <p id="resume-text">A summary of my professional background and skills.</p>
+            </div> -->
+
+        </div>
     </body>
 </html>

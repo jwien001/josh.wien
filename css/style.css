@@ -1,0 +1,51 @@
+body {
+    text-align: center;
+    max-width: 640px;
+    margin: auto;
+}
+
+.circular {
+	width: 300px;
+	height: 300px;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	background: url(../img/me.jpg) no-repeat;
+    background-position: center center;
+    margin: 2rem auto;
+}
+
+p#blurb {
+    margin-bottom: 3rem;
+}
+
+div.one-half.column.left>a.button {
+    margin-left: 3rem;
+}
+
+div.one-half.column.right>a.button {
+    #margin-right: 3rem;
+}
+
+a.button {
+    width: 15rem;
+    margin-bottom: 2rem;
+}
+
+a[disabled].button:hover {
+    border: 1px solid #bbb;
+    color: #555;
+    cursor: default;
+}
+
+a[disabled].button:hover span {
+    display: none;
+}
+a[disabled].button:hover:before {
+    content: "Coming Soon";
+}
+
+div.last-button.row {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+}
