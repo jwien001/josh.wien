@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="css/normalize.css">
@@ -12,6 +13,7 @@
             ga('create', 'UA-62307604-1', 'auto');
             ga('send', 'pageview');
         </script>
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     </head>
     <body>
         <div class="container">
@@ -35,7 +37,7 @@
             
             <div class="last-button row">
                 <div class="one-half column left">
-                    <a id="email-button" class="button" href="mailto:jwien001+website@gmail.com">Email</a>
+                    <a id="email-button" class="button" href="mailto:jwien001@gmail.com">Email</a>
                 </div>
                 <div class="one-half column right">
                     <a id="resume-button" class="button" disabled="disabled">
@@ -44,13 +46,24 @@
                 </div>
             </div>
             
-            <!-- <div id="button-text" class="row">
-                <p id="blog-text">My blog is where you will find mostly miscellaneous musings about whatever strikes my fancy.</p>
-                <p id="github-text">A collection of my various side projects from over the years.</p>
+            <div id="button-text" class="row">
+                <p id="blog-text">Read my mostly miscellaneous musings about whatever strikes my fancy.</p>
+                <p id="github-text">Browse my various side projects from over the years on GitHub.</p>
                 <p id="email-text">Want to get in touch? Email is still the best way.</p>
-                <p id="resume-text">A summary of my professional background and skills.</p>
-            </div> -->
+                <p id="resume-text">View or download my resume.</p>
+            </div>
 
         </div>
     </body>
+    <script>
+        function fadeText(fadeTo, evt) {
+            if (evt.target.id.endsWith("-button")) {
+                children = $("div#button-text").children("p");
+                children.stop();
+                if (fadeTo === 1) children.fadeOut(0);
+                $("#" + evt.target.id.replace("-button", "-text")).fadeTo(400, fadeTo);
+            }
+        }
+        $("a.button").hover(fadeText.bind(this, 1), fadeText.bind(this, 0));
+    </script>
 </html>

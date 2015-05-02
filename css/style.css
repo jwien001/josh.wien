@@ -12,7 +12,11 @@ body {
 	-moz-border-radius: 150px;
 	background: url(../img/me.jpg) no-repeat;
     background-position: center center;
-    margin: 2rem auto;
+    margin: 3rem auto 2rem;
+    
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
 }
 
 p#blurb {
@@ -48,4 +52,13 @@ a[disabled].button:hover:before {
 div.last-button.row {
     border-bottom: 1px solid #eee;
     padding-bottom: 0.5rem;
+}
+
+div#button-text {
+    margin-top: 1rem;
+}
+
+div#button-text>p {
+    display:none;
+    color: #555;
 }
