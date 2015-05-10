@@ -1,0 +1,30 @@
+body {
+    text-align: center;
+    max-width: 64rem;
+    margin: 3rem auto;
+}
+
+a.button {
+    width: 15rem;
+    margin-bottom: 2rem;
+}
+
+a[disabled].button:hover {
+    border: 1px solid #bbb;
+    color: #555;
+    cursor: default;
+}
+
+.bottom-separator {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+div#button-text {
+    margin-top: 1rem;
+}
+
+div#button-text>p {
+    display:none;
+    color: #555;
+}

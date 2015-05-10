@@ -1,0 +1,62 @@
+html {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../img/edsbo_background.png);
+    background-color: #000;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.8);
+    -webkit-box-shadow: 0 0 16px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 16px rgba(0, 0, 0, 0.8);
+}
+
+div.container {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+}
+
+form#sbo-form {
+    margin-bottom: 0;
+}
+
+form#sbo-form input, form#sbo-form select {
+    background-color: #000;
+}
+
+form#sbo-form label {
+    text-align: left;
+}
+
+form#sbo-form label.error {
+    text-align: center;
+    font-weight: 300;
+    font-size: 0.9em;
+    line-height: 0.2;
+    color: firebrick;
+    margin-bottom: 1.5rem;
+}
+
+p#result-text {
+    margin-bottom: 0;
+}
+
+footer {
+    color: #777;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-bottom: 0.5rem;
+}
+
+footer a {
+    color: #777;
+}
+
+footer a:hover {
+    color: #666;
+}

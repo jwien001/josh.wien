@@ -1,0 +1,34 @@
+.circular-headshot {
+	width: 300px;
+	height: 300px;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	background: url(../img/me.jpg) no-repeat;
+    background-position: center center;
+    margin: 0 auto 2rem;
+    
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+}
+
+div.one-half.column.left>a.button {
+    margin-left: 3rem;
+}
+
+div.one-half.column.right>a.button {
+    #margin-right: 3rem;
+}
+
+p#blurb {
+    margin-bottom: 3rem;
+}
+
+a[disabled].button:hover span {
+    display: none;
+}
+
+a[disabled].button:hover:before {
+    content: "Coming Soon";
+}
