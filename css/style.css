@@ -62,3 +62,32 @@ div#button-text>p {
     display:none;
     color: #555;
 }
+
+form#sbo-form label {
+    text-align: left;
+}
+
+form#sbo-form label.error {
+    text-align: center;
+    font-weight: 300;
+    font-size: 0.9em;
+    line-height: 0.2;
+    color: firebrick;
+    margin-bottom: 1.5rem;
+}
+
+footer {
+    color: #bbb;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+footer a {
+    color: #bbb;
+}
+
+footer a:hover {
+    color: #aaa;
+}

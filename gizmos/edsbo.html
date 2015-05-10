@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="../css/skeleton.css">
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            
+            ga('create', 'UA-62307604-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/jquery.validation/1.13.1/jquery.validate.min.js"></script>
+        <script src="../js/edsbo.js"></script>
+    </head>
+    <body>
+        <div class="container">
+        
+            <div class="row">
+                <h3>Elite: Dangerous<br>Shield Booster Optimizer</h3>
+            </div>
+            
+            <form id="sbo-form">
+                <div id="fields" class="row">
+                    <div class="six columns">
+                        <label for="utility-mount-input">Number of Utility Mounts</label>
+                        <select id="utility-mount-input" class="u-full-width">
+                        </select>
+                    </div>
+                    <div class="six columns">
+                        <label for="power-input">Available Power</label>
+                        <input id="power-input" class="u-full-width" type="number">
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <button id="calc-button" class="button-primary" type="button">Calculate</button>
+                </div>
+                
+                <div class="row">
+                    <p id="result-text"></p>
+                </div>
+            </form>
+            
+        </div>
+    </body>
+    <footer>
+        This tool is for use with the game <a href="http://www.elitedangerous.com/">Elite: Dangerous</a> (property of <a href="http://www.frontier.co.uk/">Frontier Developments</a>).
+    </footer>
+</html>
