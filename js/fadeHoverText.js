@@ -1,3 +1,4 @@
+"use strict";
 function fadeText(fadeTo, evt) {
     if (evt.target.id.endsWith("-button")) {
         children = $("div#button-text").children("p");
