@@ -77,7 +77,7 @@ function calcHelper(comb, numMounts, power, index) {
 }
 
 function combine(one, two) {
-    return [one[0] + two[0], one[1] + two[1], one[2] * two[2]];
+    return [one[0] + two[0], one[1] + two[1], one[2] + two[2]];
 }
 
 function formatResult(result) {
