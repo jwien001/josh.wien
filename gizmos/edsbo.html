@@ -23,18 +23,29 @@
         
             <div class="row">
                 <h3>Elite: Dangerous<br>Shield Booster Optimizer</h3>
+                <p>
+                    When outfitting your ship with Shield Boosters, buying the highest ratings you can afford doesn't give you the best protection. This site will calculate the configuration of Shield Boosters that maximizes your shield multiplier.
+                </p>
             </div>
             
             <form id="sbo-form">
                 <div id="fields" class="row">
                     <div class="six columns">
-                        <label for="utility-mount-input">Number of Utility Mounts</label>
+                        <label for="utility-mount-input">
+                            <abbr title="The number of open Utility Mounts that you want to fill with Shield Boosters.">
+                                Number of Utility Mounts
+                            </abbr>
+                        </label>
                         <select id="utility-mount-input" class="u-full-width" required="required">
                             <option value="" style="display:none">Select a value</option>
                         </select>
                     </div>
                     <div class="six columns">
-                        <label for="power-input">Available Power</label>
+                        <label for="power-input">
+                            <abbr title="The maximum amount of power you can spare for Shield Boosters.">
+                                Available Power
+                            </abbr>
+                        </label>
                         <input id="power-input" class="u-full-width" type="number">
                     </div>
                 </div>

@@ -28,3 +28,7 @@ div#button-text>p {
     display:none;
     color: #555;
 }
+
+abbr:hover {
+    cursor: help;
+}
