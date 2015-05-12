@@ -3,15 +3,14 @@ var MAX_UTILITY_MOUNTS = 8;
 
 // pulled from http://elite-dangerous.wikia.com/wiki/Shield_Booster
 var BOOSTERS = [
-    // [class, power, multiplier]
-    ["A", 1.2, 1.20],
-    ["B", 1.0, 1.16],
-    ["C", 0.7, 1.12],
-    ["D", 0.5, 1.08],
-    ["E", 0.2, 1.04]
+    // [class, power, multiplier, mass]
+    ["A", 1.2, 0.20, 3.5],
+    ["B", 1.0, 0.16, 3.0],
+    ["C", 0.7, 0.12, 2.0],
+    ["D", 0.5, 0.08, 1.0],
+    ["E", 0.2, 0.04, 0.5]
 ];
-
-var BLANK_COMB = ["", 0, 1];
+var BLANK_COMB = ["", 0, 1, 0];
 
 function populateUtilityMountInput() {
     var select = $("select#utility-mount-input");
@@ -45,6 +44,7 @@ function calc(numMounts, power) {
     
     helperCallCount = 0;
     var result = calcHelper(BLANK_COMB, numMounts, power, index);
+    console.debug("debug: " + result);
     console.debug("debug: " + helperCallCount);
     
     return result;
@@ -70,21 +70,29 @@ function calcHelper(comb, numMounts, power, index) {
             // consider this combination.
             best_comb = new_comb;
         
-        if (max_comb === null || best_comb[2] >= max_comb[2])
+        if (
+            max_comb === null
+            || best_comb[2] > max_comb[2] // a bigger multiplier is better
+            || (best_comb[2] === max_comb[2] && best_comb[3] < max_comb[3]) // a smaller mass is better
+        )
             max_comb = best_comb;
     }
     return max_comb;
 }
 
 function combine(one, two) {
-    return [one[0] + two[0], one[1] + two[1], one[2] + two[2]];
+    return [
+        one[0] + two[0],
+        parseFloat((one[1] + two[1]).toFixed(5)),
+        parseFloat((one[2] + two[2]).toFixed(5)),
+        parseFloat((one[3] + two[3]).toFixed(5))
+    ];
 }
 
 function formatResult(result) {
     var classes = result[0];
     var power = result[1].toFixed(2);
     var multipler = parseFloat(result[2].toFixed(3));
-    console.debug("debug: " + classes);
     
     var formatted = "";
     var currentChr = classes[0];
